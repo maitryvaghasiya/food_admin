@@ -33,7 +33,7 @@ export default function LogIn({navigation}) {
         <Text style={styles.forgot_button}>Forgot Password?</Text>
       </TouchableOpacity>
  
-      <TouchableOpacity style={styles.loginBtn} onPress={() => {navigation.navigate("home")}}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => {navigation.navigate("home1")}}>
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
 

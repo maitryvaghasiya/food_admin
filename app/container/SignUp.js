@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {StyleSheet,Text,View,Image,TextInput,Button,TouchableOpacity,} from "react-native";
 
-export default function SignUp() {
+export default function SignUp({navigation}) {
 
     const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -84,7 +84,7 @@ export default function SignUp() {
           onChangeText={(password) => setPassword(password)}
         />
       </View>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => {navigation.navigate("home1")}}>
         <Text style={styles.loginText}>Submit</Text>
       </TouchableOpacity>
     </View>

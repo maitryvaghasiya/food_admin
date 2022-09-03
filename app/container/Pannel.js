@@ -388,13 +388,9 @@
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, ScrollView, Image, Button } from 'react-native'
 import React from 'react'
 import Entypo from 'react-native-vector-icons/Entypo';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { FAB } from "@rneui/themed";
 
-export default function Pannel() {
+export default function Pannel({navigation}) {
 
   const ADDMINPANELDATA = [
     {
@@ -444,7 +440,7 @@ export default function Pannel() {
   const PenalDATA = ({ item }) => {
 
     return (
-      <TouchableOpacity>
+      <TouchableOpacity >
         <View style={Styles.card}>
           <Image style={Styles.images1} source={item.image} />
 
@@ -469,11 +465,6 @@ export default function Pannel() {
           <View>
             <Text style={Styles.curdText}>Product</Text>
           </View>
-          {/* <View>
-            <TouchableOpacity>
-            <Fontisto name='spinner-refresh' style={Styles.CurdIcon} />
-            </TouchableOpacity>
-          </View> */}
         </View>
         <View>
           <FlatList
@@ -484,13 +475,8 @@ export default function Pannel() {
           />
 
         </View>
-        {/* <View>
-          <TouchableOpacity >
-            <AntDesign name='plussquare' style={Styles.PlusIcon} />
-          </TouchableOpacity>
-        </View> */}
       </View>
-      <TouchableOpacity  onPress={() => navigation.navigate('AddScreen')}>
+      <TouchableOpacity  onPress={() => navigation.navigate('AddS')}>
         <View style={{ flex: 1 }}>
           <View style={Styles.btn} >
             <Text style={{fontSize:25,height:60,width:60,textAlign:'center',textAlignVertical:'center',color:'white'}}>+</Text>
@@ -498,11 +484,6 @@ export default function Pannel() {
         </View>
       </TouchableOpacity>
       <View>
-      {/* <FAB
-        visible={visible}
-        icon={{ name: 'add', color: 'white' }}
-        color="green"
-      /> */}
       </View>
     </ScrollView>
   )
